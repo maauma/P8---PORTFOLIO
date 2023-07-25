@@ -1,0 +1,106 @@
+.skills-section {
+  /* Styles pour la section des compétences */
+  height: 85vh;
+  margin: auto;
+  width: 90%;
+
+  .blocinfo{
+    color:black;
+  }
+
+  h2 {
+    font-size: 75px;
+    margin-bottom: 0;
+  }
+
+  h3 {
+    font-size: 34px;
+    font-weight:200;
+    letter-spacing: 0.2em;
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
+
+  
+
+  .bloc-skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 60vh;
+    background-color:rgba(100, 117, 125, 0.25);
+    border-radius: 30px;
+    width: 100%;
+    margin: auto;
+  }
+
+  .skill-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    height: 550px;
+  }
+
+  .skill-card {
+    background: #232526; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #232526, #414345); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #232526, #414345); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 300px;
+    text-align: center;
+    border-radius: 20px;
+    height: 250px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    color: white;
+    transition: transform 0.3s ease-in-out; // Ajouté pour animer le changement d'échelle
+
+    &:hover {
+        transform: scale(1.05); // Agrandit la carte de 5% lors du survol
+    }
+
+    .skill-logo {
+      transition: opacity 0.3s ease;
+      margin-bottom: 20px;
+      font-size: 70px;
+    }
+
+    p {
+      width: 80%;
+      margin: 0 auto;
+      font-size: 16px;
+      text-align: center;
+      color: white;
+      font-weight: 200;
+      transition: all 0.3s ease;
+      position: relative;  /* Ajout de la position relative */
+    }
+
+    .additional-info {
+      opacity: 0;
+      transition: all 0.3s ease;
+      position: absolute;  /* Ajout de la position absolute */
+    }
+
+    &:hover {
+      height: 260px;
+
+      h3{
+        opacity: 0;
+      }
+
+      p {
+        opacity: 0;
+      }
+
+      .additional-info {
+        opacity: 1;
+        margin-top: 50px;
+      }
+    }
+  }
+}

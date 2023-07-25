@@ -1,0 +1,28 @@
+// ProjectCard.scss
+
+.project-card {
+    // Vos styles pour la carte de projet ici
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 16px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  
+    h4 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+  
+    p {
+      font-size: 14px;
+    }
+  
+    img {
+      width: 100px; // Ajustez la taille du logo ici
+      height: 100px;
+      margin-top: 16px;
+      border-radius: 50%;
+    }
+  
+    // Ajoutez d'autres styles au besoin
+  }
+  

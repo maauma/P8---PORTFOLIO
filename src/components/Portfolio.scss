@@ -1,0 +1,122 @@
+.portfolio-section {
+    height: 87vh;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blocPhoto{
+    width: 45%;
+    height: 100%; // Ajoutez ceci
+    background-color: aquamarine;
+    border-radius: 0 30px 30px 0;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0 30px 30px 0;
+
+    }
+}
+
+.blocPortfolio{
+    width:55%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h4{color:red;}
+
+}
+
+.blocLogo{
+    margin-top:0;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+
+.portfolio{
+    width: 90%; // Assurez-vous d'ajouter une largeur à .portfolio
+}
+
+.portfolio-infos {
+    width: 100%;
+    margin: auto;
+
+    h3 {
+      color: black;
+      font-size: 75px;
+      margin-bottom: 0px;
+    }
+
+    p {
+      margin-top: 0;
+      font-size: 22px;
+    }
+}
+
+.project-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    gap: 50px;
+    
+
+    a{
+        text-decoration: none;
+    }
+}
+
+
+
+.project-card {
+    background: #232526;
+    background: -webkit-linear-gradient(to right, #232526, #414345);
+    background: linear-gradient(to right, #232526, #414345);
+    width: 100%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+    border-radius: 30px;
+    border: 3px beige solid;
+    transition: transform 0.3s ease-in-out; // Ajouté pour animer le changement d'échelle
+
+    &:hover {
+        transform: scale(1.05); // Agrandit la carte de 5% lors du survol
+    }
+
+    .blocLogo {
+        margin-top: 0;
+        img {
+            width: 30px;
+        }
+    }
+
+    h4 {
+        color: white;
+        margin-top: 25px;
+        text-decoration: none;
+        margin-bottom: 0;
+        font-size: 30px;
+        margin-left: 15px;
+    }
+
+    p {
+        color: beige;
+        margin-top: 5px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    a {
+        color: darkseagreen;
+        text-decoration: none;
+    }
+}
+
+
