@@ -1,87 +1,26 @@
-// ContactPage.js
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
 import './ContactPage.scss';
+import './mobile.scss';
+import 'aos/dist/aos.css';
 
 const ContactPage = () => {
-  // State pour stocker les valeurs des champs du formulaire
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  });
-
-  // Gestionnaire de changement pour les champs du formulaire
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  // Gestionnaire de soumission du formulaire
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Données du formulaire soumises :', formData);
-    // Réinitialisation des valeurs du formulaire après soumission
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: '',
+  useEffect(() => {
+    AOS.init({
+      duration: 2000
     });
-  };
+  }, []);
 
   return (
-    <div className="contact">
-      <h1>Contact</h1>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="name">Nom</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="email">Adresse e-mail</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="subject">Objet de la demande</label>
-          <input
-            type="text"
-            id="subject"
-            name="subject"
-            value={formData.subject}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="message">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <button type="submit">Envoyer</button>
-      </form>
+    <div className="contact" data-aos="fade-up">
+      <div className='contenu' data-aos="fade-up">
+        <img src={process.env.PUBLIC_URL + '/images/signatureblack.png'} alt="Votre nom" />
+
+        <h1>Contactez-moi</h1>
+        <p>Besoin d'un développeur web pour réaliser votre projet ? Avec une expertise en HTML, CSS, JavaScript et React, je suis là pour donner vie à vos idées ! <a href="mailto:paitamateo@icloud.com">Contactez-moi</a> dès maintenant pour discuter de votre projet web.</p>
+        <h4><i className="fas fa-map-marker-alt"></i> Lyon - France</h4>
+        <p><i className="fas fa-envelope"></i> <a href="mailto:paitamateo@icloud.com">paitamateo@icloud.com</a></p>
+      </div>
     </div>
   );
 };

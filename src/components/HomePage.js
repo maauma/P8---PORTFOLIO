@@ -4,7 +4,16 @@ import React, { useState, useEffect } from 'react';
 import SkillsSection from './SkillsSection';
 import Portfolio from './Portfolio';
 import ContactPage from "./ContactPage";
-import { Link, Element } from 'react-scroll';
+import './mobile.scss';
+import { Link as ScrollLink, Element } from 'react-scroll';
+import { Link } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { animateScroll as scroll } from 'react-scroll';
+
+
+
+
 
 const words = ['Créer...', 'Détruire...', 'Imaginer...', 'Développer...'];
 
@@ -55,17 +64,18 @@ const HomePage = () => {
     <div>
       <Element name="home">
         {/* Section 1: Infos */}
-        <div className="landing-page">
+        <section className="landing-page">
+          <div className='section1'>
           <div className='bloc1'>
             <div className='menu1'>
               <h1>Développeur web</h1>
               <ul>
-                <li>SEO</li>
-                <li>Webdesign</li>
-                <li>CSS</li>
-                <li>REACT</li>
-                <li>JavaScript</li>
-                <li>HTML5</li>
+              <li><Link to="/skills">SEO</Link></li> 
+<li><Link to="/skills">Webdesign</Link></li>
+<li><Link to="/skills">CSS</Link></li>
+<li><Link to="/skills">REACT</Link></li>
+<li><Link to="/skills">JavaScript</Link></li>
+<li><Link to="/skills">HTML5</Link></li>
               </ul>
             </div>
           <div className='blocNom'>
@@ -74,23 +84,25 @@ const HomePage = () => {
           </div>
           <div className='bloc2'>
           <h2>{`${words[index].substring(0, subIndex)}${blink ? '|' : ' '}`}</h2>
-          <img src="../images/signatureblack.png" alt="Signature de Matéo PAÏTA" />
-
+          <img  src="../images/signatureblack.png" alt="Signature de Matéo PAÏTA" />
           </div>
-        </div>
-        <div className="separator" />
+          </div>
+        </section>
+        <div  />
       </Element>
 
       <Element name="skills">
         {/* Section 2: Compétences */}
         <SkillsSection />
-        <div className="separator" />
+        <div  />
       </Element>
+      <hr />
 
       <Element name="portfolio">
         <Portfolio />
-        <div className="separator" />
+        <div  />
       </Element>
+      <hr />
 
       <Element name="contact">
         <ContactPage />

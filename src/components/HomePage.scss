@@ -1,19 +1,43 @@
 /* HomePage.scss */
+hr {
+  border: none; // Enlève la bordure par défaut
+  height: 1px; // Définit l'épaisseur de la ligne
+  background-color: #181818; // Définit la couleur de la ligne
+  margin: 50px 0; // Ajoute de l'espace au-dessus et en dessous de la ligne
+  width: 85%;
+  margin: auto;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+
+
+
+
 
 .landing-page{
     overflow: auto;
-    margin-top: 8%;
+    margin-top: 5%;
+
+    a {
+      text-decoration: none;
+
+    }
+
+
 }
 
-.separator {
-  border-top: 1px solid #000; /* remplacer par la couleur de votre choix */
+
+
+
+
+
+
+.section1{
+  height: 85vh;
   width: 90%;
-  margin-top: 20px; /* ajuster pour l'espace souhaité autour du séparateur */
   margin: auto;
 }
-
-
-
 
 .bloc1 {
   display: flex;
@@ -23,7 +47,7 @@
   width: 90%;
   margin: auto;
   margin-top: 2%;
-  height: 30vh;
+  height: 85vh;
 
   h1 {
     color: black;
@@ -93,7 +117,6 @@
   position: relative;
   width: 90%;
   margin: auto;
-  height: 30vh;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;

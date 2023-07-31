@@ -1,9 +1,126 @@
 .section-projet {
-    background-color: darkgoldenrod;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #f9f9f9;
     width: 90%;
     margin: auto;
+    margin-top: 8em;
+    margin-bottom: 4em;
+  }
+  
+  .section-projet h2 {
+    font-size: 4em;
+    color: #333;
+    margin-bottom: 0em;
+    margin-top: 0px;
+  }
+  
+  .section-projet p {
+    font-size: 1.2em;
+    color: #666;
+    text-align:justify;
+    margin-top: 0;
+  }
+  
+  .section-projet img {
+    width: 50px;
+    margin-bottom: 0px;
+  }
+  
+  .gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Add this line to make position context for the buttons */
+    width: 100%;
+    background-color: deeppink;
+    border-radius: 50px;
+    height: 40vh;
+    margin-bottom: 3em;
+    margin-top: 2em;
 
-    img {
-        width: 80px;
-    }
-}
+  }
+  
+  .gallery img {
+    height: 100%;
+    border-radius: 50px;
+    object-fit: cover;
+  }
+  
+  .gallery img:first-of-type {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .gallery button {
+    padding: 0.5em 1em;
+    font-size: 1em;
+    color: #fff;
+    background: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    position: absolute; /* Add this line to position the buttons */
+  }
+  
+  /* Position the buttons as needed */
+  .gallery button:first-of-type {
+    left: 20px;
+  }
+  
+  .gallery button:last-of-type {
+    right: 20px;
+  }
+  
+  .gallery button:hover {
+    background: #666;
+  }
+
+  .full-screen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+  
+  .full-screen-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  /* Additional styling for the full-screen gallery */
+.image-container {
+    position: relative;
+  }
+  
+  .modal-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    font-size: 2em;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .prev-button {
+    left: 10px;
+  }
+  
+  .next-button {
+    right: 10px;
+  }
+
+  /* Additional styling as needed... */
+  

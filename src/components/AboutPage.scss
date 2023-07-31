@@ -1,79 +1,85 @@
 .about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+  color: #333;
+
+  .about-header {
+    text-align: center;
+    width: 100%;
+
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1em;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+  }
+
+  .bloc-about {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 50px;
-    text-align: center;
-  
-    .about-header {
-      margin-bottom: 50px;
-  
-      h1 {
-        font-size: 50px;
-        color: #333;
-        transition: color 0.3s ease;
-    
-        &:hover {
-          color: #007bff;
+    gap: 2em;
+    width: 100%;
+
+    .info-section {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      background-color: #f9f9f9;
+      padding: 1.5em;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+
+      h2 {
+        font-size: 1.2em;
+        display: flex;
+        align-items: center;
+
+        svg {
+          margin-right: 0.5em;
         }
       }
-    }
-  
-    .about-intro, .about-education, .about-experience, .about-skills, .about-contact {
-      margin-bottom: 50px;
-  
-      h2 {
-        font-size: 40px;
-        color: #007bff;
-        margin-bottom: 20px;
-      }
-  
+
       p {
-        font-size: 20px;
-        color: #333;
+        font-size: 1em;
         line-height: 1.5;
       }
     }
-  
-    .about-intro {
-      animation: fade-in 1s;
-    }
-  
-    .about-education {
-      animation: slide-in 1s;
-    }
-  
-    .about-experience {
-      animation: fade-in 1s;
-    }
-  
-    .about-skills {
-      animation: slide-in 1s;
-    }
-  
-    .about-contact {
-      animation: fade-in 1s;
+
+    .signature {
+      width: 100px;
+      height: auto;
+      margin-top: 1em;
     }
   }
-  
-  @keyframes fade-in {
-    from {
-      opacity: 0;
+
+  @media screen and (min-width: 768px) {
+    .about-header {
+      width: 70%;
     }
-    to {
-      opacity: 1;
+
+    .bloc-about {
+      width: 70%;
+
+      .info-section {
+        h2 {
+          font-size: 1.4em;
+        }
+
+        p {
+          font-size: 1.1em;
+        }
+      }
     }
   }
-  
-  @keyframes slide-in {
-    from {
-      transform: translateX(-50px);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-  
+}

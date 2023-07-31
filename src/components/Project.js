@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import './mobile.scss';
 
 const Project = () => {
   const { id } = useParams();  // Récupérez l'identifiant du projet dans l'URL

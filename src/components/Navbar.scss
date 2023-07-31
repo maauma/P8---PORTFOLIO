@@ -5,19 +5,21 @@ nav {
   right: 20%; // Aligne le côté droit du nav avec le côté droit de l'écran
   width: 60%; // Occupe 60% de la largeur de l'écran
   z-index: 1000; // Garantit que le nav est au-dessus du reste du contenu
-
-  background-color: #333;
-  display: flex;
+  background: rgba(35, 37, 38, 0.8); /* Couleur avec opacité 0.8 */
+  /* Reste du dégradé linéaire */
+  background: -webkit-linear-gradient(to right, rgba(35, 37, 38, 0.9), rgba(65, 67, 69, 0.8));
+  background: linear-gradient(to right, rgba(35, 37, 38, 0.9), rgba(65, 67, 69, 0.9));
+    display: flex;
   justify-content: center;
   align-items: center;
   color: white;
   text-decoration: none;
   padding: 20px;
   border-radius: 40px;
-  margin-bottom: 50px;
+  margin-bottom: 5%;
   margin-top: 15px;
   height: 20px;
-  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.4);
+  box-shadow: px 4px 6px rgba(0, 0, 0, 0.4);
 
 
   img {
