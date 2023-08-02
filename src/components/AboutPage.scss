@@ -4,82 +4,126 @@
   align-items: center;
   padding: 2em;
   color: #333;
+}
 
+.about-header {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 2em;
+
+  img {
+    width: 15%; /* Use relative unit for image width */
+    max-width: 150px; /* Set a maximum width for large screens */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1em;
+  }
+
+  p {
+    font-size: 1.1em;
+    line-height: 1.6;
+  }
+}
+
+
+.bloc-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  width: 100%;
+}
+
+
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  background-color: #f9f9f9;
+  padding: 1em;
+  padding-bottom: 0;
+  border-radius: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+
+
+
+  &:hover{
+    scale: 1.05;
+  }
+}
+
+h2 {
+  display: flex;
+  align-items: center;
+  cursor: pointer; /* Add a pointer cursor on hover */
+}
+
+svg {
+  margin-right: 0.5em;
+}
+
+p {
+  font-size: 1em;
+  margin-top: 0;
+  line-height: 1.5;
+}
+
+.signature {
+  width: 100px; /* Use responsive unit or percentage here */
+  height: auto;
+  margin-top: 1em;
+}
+
+.info-section h2 {
+  font-size: 1.7em;  // reduce font size
+  line-height: 0.4em;  // reduce line height
+  margin: 0;         // remove margins
+  padding: 0.1em;    // add some padding
+}
+
+/* Responsive styles for tablets and larger screens */
+@media screen and (min-width: 768px) {
   .about-header {
-    text-align: center;
-    width: 100%;
-
-    img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 1em;
-    }
-
-    p {
-      font-size: 1.1em;
-      line-height: 1.6;
-    }
+    width: 70%;
   }
 
   .bloc-about {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2em;
-    width: 100%;
-
-    .info-section {
-      display: flex;
-      flex-direction: column;
-      gap: 1em;
-      background-color: #f9f9f9;
-      padding: 1.5em;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-
-      h2 {
-        font-size: 1.2em;
-        display: flex;
-        align-items: center;
-
-        svg {
-          margin-right: 0.5em;
-        }
-      }
-
-      p {
-        font-size: 1em;
-        line-height: 1.5;
-      }
-    }
-
-    .signature {
-      width: 100px;
-      height: auto;
-      margin-top: 1em;
-    }
+    width: 70%;
   }
 
-  @media screen and (min-width: 768px) {
-    .about-header {
-      width: 70%;
+ 
+
+  .info-section p {
+    font-size: 1.1em;
+  }
+}
+
+/* Mobile styles for screens smaller than 768px */
+@media screen and (max-width: 767px) {
+  .about-header {
+    width: 90%;
+  }
+
+  .bloc-about {
+    width: 90%;
+
+    .info-section h2 {
+      margin-bottom: 0;
+      margin-top: 0;
     }
 
-    .bloc-about {
-      width: 70%;
+svg {
+  width: 1em;
+  display: none;
+}
 
-      .info-section {
-        h2 {
-          font-size: 1.4em;
-        }
-
-        p {
-          font-size: 1.1em;
-        }
-      }
+    .info-section p {
+      font-size: 1em;
+      margin-top: 0;
     }
   }
 }

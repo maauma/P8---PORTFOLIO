@@ -13,6 +13,7 @@ const ProjectDetail = () => {
 
   const projects = [
     {
+      logoProjet: '/images/kasa.png',
       id: 1,
       title: 'Kasa',
       description: "Rendre l'hébergement accessible à tous avec KASA",
@@ -21,6 +22,7 @@ const ProjectDetail = () => {
       details: "Découvrez mon projet d'intégration pour le site KASA, une plateforme d'hébergement qui vise à rendre les séjours touristiques plus accessibles à tous. J'ai collaboré étroitement avec l'équipe de développement pour transformer les maquettes en un site web fonctionnel et attrayant. En utilisant HTML et CSS, j'ai donné vie à l'interface utilisateur pour offrir une expérience fluide et intuitive aux visiteurs. Grâce à une approche responsive, le site s'adapte à tous les appareils, des ordinateurs de bureau aux smartphones. Explorez le monde avec KASA en trouvant facilement des hébergements de qualité et des activités passionnantes !"
     },
     {
+      logoProjet: '/images/logoBooki.png',
       id: 2,
       title: 'Booki',
       description: 'Description du projet 2',
@@ -95,7 +97,8 @@ const ProjectDetail = () => {
   return (
     <div className="section-projet">
       <img src={project.logo} alt={`${project.title} logo`} />
-      <h2>{project.title}</h2>
+      <img className="logo-projet" src={project.logoProjet} alt={`${project.title} logo-projet`} />
+
       <p>{project.description}</p>
       <p>{project.details}</p>
       <hr />

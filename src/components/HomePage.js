@@ -15,6 +15,7 @@ import { animateScroll as scroll } from 'react-scroll';
 
 
 
+
 const words = ['Créer...', 'Détruire...', 'Imaginer...', 'Développer...'];
 
 const HomePage = () => {
@@ -65,7 +66,7 @@ const HomePage = () => {
       <Element name="home">
         {/* Section 1: Infos */}
         <section className="landing-page">
-          <div className='section1'>
+        <div className='section1' style={{ backgroundImage: `url(/images/wallpaper.jpg)` }}>
           <div className='bloc1'>
             <div className='menu1'>
               <h1>Développeur web</h1>
@@ -78,16 +79,33 @@ const HomePage = () => {
 <li><Link to="/skills">HTML5</Link></li>
               </ul>
             </div>
+
           <div className='blocNom'>
-          <p>MATÉO PAÏTA</p>
+          <img className='sign-mobile' src="../images/signatureblack.png" alt="Signature de Matéo PAÏTA" />
+          <h3>MATÉO PAÏTA</h3>
+          <hr />
+          <p>LYON <strong>FRANCE</strong></p>
+          <h4>Développeur web</h4>
+          <ul className='liste-mobile'>
+          <li><Link to="/skills">SEO</Link></li> 
+<li><Link to="/skills">Webdesign</Link></li>
+<li><Link to="/skills">CSS</Link></li>
+<li><Link to="/skills">REACT</Link></li>
+<li><Link to="/skills">JavaScript</Link></li>
+<li><Link to="/skills">HTML5</Link></li>
+            
+          </ul>
+          <div className='sign-desktop'>
+           <img src="../images/signatureblack.png" alt="Signature de Matéo PAÏTA" />
+          </div>
           </div>
           </div>
           <div className='bloc2'>
           <h2>{`${words[index].substring(0, subIndex)}${blink ? '|' : ' '}`}</h2>
-          <img  src="../images/signatureblack.png" alt="Signature de Matéo PAÏTA" />
           </div>
           </div>
         </section>
+        <hr />
         <div  />
       </Element>
 

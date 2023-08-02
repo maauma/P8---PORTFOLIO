@@ -8,7 +8,7 @@ import { faBrush } from '@fortawesome/free-solid-svg-icons';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-const skillsData = [
+export const skillsData = [
   {
     id : 1,
     title: 'HTML',
@@ -88,7 +88,7 @@ const SkillsSection = () => {
       <div className='blocinfo' data-aos="fade-up">
         <h2>Mes compétences</h2>
         <h3>Pour donner vie à votre vision</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis est justo, suscipit quis mauris id, ultrices viverra dui. Phasellus laoreet imperdiet molestie. Vestibulum aliquam mauris venenatis sollicitudin placerat. Maecenas ut dui arcu. Proin eros neque, dignissim sed velit et, volutpat semper est. Nunc et libero ut odio rhoncus varius nec vitae neque. Nulla tincidunt nulla quis purus bibendum, vitae pulvinar felis vehicula. Integer id eros ipsum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In vitae rhoncus velit. Nulla posuere mauris neque, a sodales mi hendrerit at.</p>
+        <p>Mon rôle de <strong>développeur web</strong>, c'est d'apporter <strong>votre vision</strong> à la vie numérique.<br></br> Grâce à mon expertise en HTML5, CSS, JavaScript et React, je suis capable de transformer vos<strong> idées en sites web interactifs et dynamiques.</strong> En tant qu'ancien designer graphique, je conçois des <strong>interfaces utilisateur attrayantes</strong> qui améliorent <strong>l'expérience utilisateur</strong> et encouragent <strong>l'engagement</strong>. De plus, grâce à ma maîtrise du SEO, je peux<strong> optimiser la visibilité de votre site </strong> sur les moteurs de recherche, pour que votre vision atteigne un <strong>public plus large</strong>.</p>
       </div>
       <div className='bloc-skills'>
         <div className="skill-cards">

@@ -1,32 +1,36 @@
 .skill-card.gradient-1 {
-  background: linear-gradient(to right, #D35400, #E67E22); /* HTML */
+  background: linear-gradient(to right, #1F1C2C, #928DAB); /* React */
 }
 
 .skill-card.gradient-2 {
-  background: linear-gradient(to right, #2980B9, #3498DB); /* CSS */
+  background: linear-gradient(to right, #1F1C2C, #928DAB); /* React */
 }
 
 .skill-card.gradient-3 {
-  background: linear-gradient(to right, #091833, #1E3C72); /* React */
+  background: linear-gradient(to right, #1F1C2C, #928DAB); /* React */
 }
 
 .skill-card.gradient-4 {
-  background: linear-gradient(to right, #525252, #BDB76B); /* JavaScript */
+  background: linear-gradient(to right, #1F1C2C, #928DAB); /* React */
 }
 
 
 .skill-card.gradient-5 {
-  background: linear-gradient(to right, #A9A9A9, #D3D3D3); /* Design */
+  background: linear-gradient(to right, #1F1C2C, #928DAB); /* React */
 }
 
 
 .skill-card.gradient-6 {
-  background: linear-gradient(to right, #4285F4, #A0C3FF); /* SEO (Google) */
+  background: linear-gradient(to right, #1F1C2C, #928DAB); /* React */
 }
 
 
 
 
+
+.blocLogo {
+  height: 100px; /* ou toute autre valeur fixe appropriée */
+}
 
 
 
@@ -34,9 +38,8 @@
   margin: auto;
   width: 90%;
   margin-bottom: 0;
-  height: auto;
-  max-height: 900px;
-  margin-bottom: 2%;
+  font-family: 'Rubik';
+  
 
   .blocinfo{
     color:black;
@@ -52,7 +55,6 @@
   h3 {
     font-size: 34px;
     font-weight:200;
-    letter-spacing: 0.2em;
     margin-bottom: 20px;
     margin-top: 0;
   }
@@ -66,6 +68,7 @@
     width: 90%;
     margin: auto;
     margin-top: 5%;
+    padding: 1.2em;
   }
 
   .skill-cards{
@@ -73,17 +76,17 @@
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     justify-items: center;
-    height: 550px;
+    height: 450px;
     gap: auto;
     padding: auto;
   }
 
   .skill-card {
 
-    width: 1/3;
+    width: 93%;
     text-align: center;
     border-radius: 20px;
-    height: 200px;
+    height: 210px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -92,15 +95,19 @@
     overflow: hidden;
     color: white;
     transition: transform 0.3s ease-in-out;
-    margin-left: 15px;
-    margin-right: 15px;
+  
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 
     &:hover {
         transform: scale(1.02);
         .skill-logo,
         h3,
-        p {opacity: 1;}
+        p {
+          font-size: 1.2em;
+          opacity: 1;
+          margin-left: 0.5em;
+          margin-right: 0.5em;
+        }
         .info-button {
           top: 0;
           right: 0;
@@ -111,10 +118,12 @@
     }
 
     .skill-logo{
-      color: white;
+      color: wheat;
       margin-top: 3%;
-      font-size: 3em;
+      font-size: 2em;
       transition: opacity 0.3s ease;
+      margin-left: 0.5em;
+      margin-bottom: 0.21em;
     }
 
     h3 {
@@ -125,9 +134,10 @@
     }
 
     p {
-      width: 80%;
+      width: 95%;
+      line-height: 1.2em;
       margin-top: 0;
-      font-size: 16px;
+      font-size: 0.9em;
       text-align: center;
       color: white;
       font-weight: 200;
@@ -160,5 +170,52 @@
         to { opacity: 1; }
       }
     }
+  }
+}
+
+
+ // Pour les tablettes
+ @media (max-width: 768px) {
+
+  .skills-section {
+    height: 1900px;
+  }
+
+  h2 {
+    font-size: 3em!important;
+  }
+
+  h3 {
+    font-size: 24px;
+    letter-spacing: 0!important;
+  }
+
+  .skill-cards {
+    grid-template-columns: 1fr !important;
+    grid-auto-rows: auto;
+    gap: 5%;
+  }
+
+  .bloc-skills {
+    background-color: transparent!important;
+  }
+}
+
+// Pour les mobiles
+@media (max-width: 576px) {
+  .skills-section{
+    height: 2000px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .skill-cards {
+    grid-template-columns: 1fr !important;
+    grid-auto-rows: auto;
   }
 }

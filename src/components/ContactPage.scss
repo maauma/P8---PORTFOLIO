@@ -1,5 +1,5 @@
 // ContactPage.scss
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@100;300;400;700&display=swap');
 
 $primary-color: #3498db;
 $secondary-color: #2c3e50;
@@ -8,8 +8,7 @@ $white-color: #ffffff;
 
 .contact {
   background-color: $background-color;
-  font-family: 'Roboto', sans-serif;
-  height: 100vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,30 +16,84 @@ $white-color: #ffffff;
   padding: 0 30px;
   color: $secondary-color;
 
+  a {
+    text-decoration: none;
+    color: rgb(44, 195, 173);
+    margin-top: 0;
+    transition: color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      color: #1a758f;
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    &:active {
+      color: #1a758f;
+      transform: scale(1);
+    }
+  }
+
+  .blocontact {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-left: 0;
+  }
+
+  .prescontact{
+    display: flex;  
+    align-items: flex-end;
+    height: 42vh;
+   }
+
   .contenu {
     text-align: center;
     max-width: 800px;
+    height: 400px;
     padding: 40px;
     background-color: $white-color;
-    border-radius: 10px;
+    border-radius: 30px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    text-align: left;
 
     img {
-      width: 120px;
-      height: 120px;
-      margin-bottom: 1em;
+      margin-top: 0;
+      height: 300px;
     }
 
     h1 {
-      font-size: 2.5em;
-      margin-bottom: 20px;
-      color: $primary-color;
+      font-size: 4em;
+      margin-bottom: 5px;
+      font-weight: 700;
+      margin-top: 0;
+      font-family: 'Rubik';
     }
 
     h2 {
       font-size: 2em;
       margin-bottom: 10px;
       color: $secondary-color;
+    }
+
+    h4 {
+      font-size: 4em;
+      margin-bottom: 0;
+      margin-top: 0;
+      color: black;
+    }
+
+    h5 {
+      margin-top: 0;
+      font-size: 20px;
+      margin-bottom: 0;
+      font-weight: 100;
+      color: black;
+
+    }
+
+    .hr {
     }
 
     p {
@@ -54,4 +107,112 @@ $white-color: #ffffff;
       }
     }
   }
+
+  .bloc1contact {
+    width: 45%;
+
+    h4 {
+      color: red;
+    }
+
+    h5{
+      color: red;
+    }
+  }
+
+  .bloc1{
+    background-color: #2a9d8f;
+  }
+
+  .contact-button {
+    display: inline-block;
+    background-color: #2a9d8f;
+    color: white;
+    padding: 10px 20px;
+    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0.7em;
+    border-radius: 15px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2em;
+    transition: background-color 0.3s ease;
+    font-weight: 100;
+    font-family: 'Rubik';
+  
+    &:hover {
+      background-color: #1a758f;
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+  
+    &:active {
+      background-color: #1a758f;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    }
+  }
+
+  .contact-details{
+    width: 45%;
+    margin: auto;
+    border-radius: 30px;
+    border: none;
+    display: flex;
+    align-items: center;
+    margin-top: 1e;
+    justify-content: center;
+    background: -webkit-linear-gradient(to right, #232526, #414345);
+    background: linear-gradient(to right, #232526, #414345);
+  }
+ 
+
+  svg {
+    font-size: 5em;
+   text-align: center;
+  }
+
+  h4 {
+    color: beige;
+    margin-left: 0;
+  }
+
+  h5 {
+    text-align: left;
+    color: beige;
+    margin-left: 1em;
+  }
+  
 }
+
+.contact-form {
+  margin-top: 20px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form form input,
+.contact-form form textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-form form button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form form button:hover {
+  background-color: #444;
+}
+
