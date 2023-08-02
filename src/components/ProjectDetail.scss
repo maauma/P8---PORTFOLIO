@@ -7,8 +7,53 @@
     margin: auto;
     margin-top: 8em;
     margin-bottom: 4em;
+    height: 100vh;
   }
-  
+
+  hr {
+    width: 100%;
+  }
+
+  .bloclogos{
+    margin-right: 0!important;
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: auto;
+    gap: 1em;
+  }
+
+  .blocinfoprojet{
+    width: 100%;
+    display: flex;
+    margin: 0!important;
+    margin-bottom: 1em!important;
+      
+  }
+
+  .bloc1{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0;
+
+    h3{
+      font-size: 2em;
+      font-family: 'Rubik';
+      margin-top: 0.5em;
+      margin-bottom: 0!important;
+      font-weight: 100;
+    }
+
+    p{
+      margin-bottom: 2em!important;
+    }
+
+    img {
+      width: 20%!important;
+    }
+
+  }
   
 
   
@@ -27,7 +72,7 @@
   }
   
   .section-projet img {
-    width: 50px;
+    width: 3em;
     margin-bottom: 0px;
   }
   
@@ -36,12 +81,10 @@
     align-items: center;
     justify-content: center;
     position: relative; /* Add this line to make position context for the buttons */
-    width: 100%;
-    background-color: deeppink;
+    width: 70%;
     border-radius: 50px;
-    height: 40vh;
-    margin-bottom: 3em;
-    margin-top: 2em;
+    border: solid black 5px;
+    height: 400px;
 
   }
   
@@ -125,6 +168,33 @@
     right: 10px;
   }
 
+  .partie2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .blocConclusion{
+    color: black;
+    font-size: 2em;
+    font-family: Rubik;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h3{
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    ul{
+      margin-top: 0!important;
+      list-style-type:disc;
+    }
+    
+  }
  
   
   /* Additional styling as needed... */

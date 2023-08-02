@@ -13,13 +13,15 @@ const ProjectDetail = () => {
 
   const projects = [
     {
-      logoProjet: '/images/kasa.png',
+      logoProjet: '/images/logoBooki.png',
       id: 1,
       title: 'Kasa',
       description: "Rendre l'hébergement accessible à tous avec KASA",
       logo: '/images/react.png',
+      logo2:  `${process.env.PUBLIC_URL}/images/js.png`,
       images: ['/images/paysage.webp', '/images/ol.png', '/images/paysage.webp'],
-      details: "Découvrez mon projet d'intégration pour le site KASA, une plateforme d'hébergement qui vise à rendre les séjours touristiques plus accessibles à tous. J'ai collaboré étroitement avec l'équipe de développement pour transformer les maquettes en un site web fonctionnel et attrayant. En utilisant HTML et CSS, j'ai donné vie à l'interface utilisateur pour offrir une expérience fluide et intuitive aux visiteurs. Grâce à une approche responsive, le site s'adapte à tous les appareils, des ordinateurs de bureau aux smartphones. Explorez le monde avec KASA en trouvant facilement des hébergements de qualité et des activités passionnantes !"
+      details: "Découvrez mon projet d'intégration pour le site KASA, une plateforme d'hébergement qui vise à rendre les séjours touristiques plus accessibles à tous. J'ai collaboré étroitement avec l'équipe de développement pour transformer les maquettes en un site web fonctionnel et attrayant. En utilisant HTML et CSS, j'ai donné vie à l'interface utilisateur pour offrir une expérience fluide et intuitive aux visiteurs. Grâce à une approche responsive, le site s'adapte à tous les appareils, des ordinateurs de bureau aux smartphones. Explorez le monde avec KASA en trouvant facilement des hébergements de qualité et des activités passionnantes !",
+      conclusion: ["Découvre", "Explore", "Apprécie", "Déguste", "Apprends"],
     },
     {
       logoProjet: '/images/logoBooki.png',
@@ -78,11 +80,13 @@ const ProjectDetail = () => {
 
   if (!project) return <div>Chargement...</div>;
 
-  const handlePrevClick = () => {
+  const handlePrevClick = (e) => {
+    e.stopPropagation();
     setImageIndex((oldIndex) => (oldIndex === 0 ? project.images.length - 1 : oldIndex - 1));
   };
 
-  const handleNextClick = () => {
+  const handleNextClick = (e) => {
+    e.stopPropagation();
     setImageIndex((oldIndex) => (oldIndex === project.images.length - 1 ? 0 : oldIndex + 1));
   };
 
@@ -96,32 +100,56 @@ const ProjectDetail = () => {
 
   return (
     <div className="section-projet">
-      <img src={project.logo} alt={`${project.title} logo`} />
-      <img className="logo-projet" src={project.logoProjet} alt={`${project.title} logo-projet`} />
-
-      <p>{project.description}</p>
+      <div className='blocinfoprojet'>
+        <div className='bloc1'>
+          <img src={project.logoProjet} alt={`${project.title} logoProjet`} />
+          <h3>{project.description}</h3>
+        </div>
+        <div className='bloclogos'>
+          <img className="logo" src={project.logo} alt={`${project.title} logo`} />
+          <img className="logo2" src={project.logo2} alt={`${project.title} logo2`} />
+        </div>
+      </div>
       <p>{project.details}</p>
       <hr />
-      <p>{project.conclusion}</p>
 
-      <div className="gallery">
-        <button onClick={handlePrevClick}>
-          <FontAwesomeIcon icon={faArrowLeft} />
-        </button>
-        {isFullScreen ? (
-          <div className="full-screen-overlay" onClick={handleExitFullScreen}>
-            <img src={project.images[imageIndex]} alt={`${project.title} image`} />
-          </div>
-        ) : (
-          <img
-            src={project.images[imageIndex]}
-            alt={`${project.title} image`}
-            onClick={handleImageClick}
-          />
-        )}
-        <button onClick={handleNextClick}>
-          <FontAwesomeIcon icon={faArrowRight} />
-        </button>
+      <div className='partie2'>
+        <div className='blocConclusion'>
+          <h3>Compétences</h3>
+          < hr/>
+          <ul>
+            {project.conclusion && project.conclusion.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="gallery">
+          {isFullScreen ? (
+            <div className="full-screen-overlay" onClick={handleExitFullScreen}>
+              <button onClick={handlePrevClick}>
+                <FontAwesomeIcon icon={faArrowLeft} />
+              </button>
+              <img src={project.images[imageIndex]} alt={`${project.title} image`} />
+              <button onClick={handleNextClick}>
+                <FontAwesomeIcon icon={faArrowRight} />
+              </button>
+            </div>
+          ) : (
+            <>
+              <button onClick={handlePrevClick}>
+                <FontAwesomeIcon icon={faArrowLeft} />
+              </button>
+              <img
+                src={project.images[imageIndex]}
+                alt={`${project.title} image`}
+                onClick={handleImageClick}
+              />
+              <button onClick={handleNextClick}>
+                <FontAwesomeIcon icon={faArrowRight} />
+              </button>
+            </>
+          )}
+        </div>
       </div>
     </div>
   );
