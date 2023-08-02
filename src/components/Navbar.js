@@ -1,26 +1,30 @@
 // Navbar.js
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 import './Navbar.scss';
 import './mobile.scss';
 
 const Navbar = () => {
   return (
     <nav>
-            <img src="../images/signature.png" alt="Signature de Matéo PAÏTA" />
+      {/* Remplacez le texte "Accueil" par l'image */}
+      <ScrollLink to="home" smooth={true} duration={500} offset={-80}>
+        <img src={process.env.PUBLIC_URL + '/images/signature.svg'} alt="Signature de Matéo PAÏTA" />
+      </ScrollLink>
 
       <ul>
         <li>
-          <NavLink exact to="/" activeClassName="active-link">Accueil</NavLink>
+          <ScrollLink to="about" smooth={true} duration={500} offset={-80}>À propos</ScrollLink>
         </li>
         <li>
-          <NavLink to="/about" activeClassName="active-link">À propos</NavLink>
+          <ScrollLink to="contact" smooth={true} duration={500} offset={-80}>Contact</ScrollLink>
         </li>
         <li>
-          <NavLink to="/contact" activeClassName="active-link">Contact</NavLink>
+          <ScrollLink to="portfolio" smooth={true} duration={500} offset={-80}>Portfolio</ScrollLink>
         </li>
+
         <li>
-          <NavLink to="/portfolio" activeClassName="active-link">Portfolio</NavLink>
+          <ScrollLink to="skills" smooth={true} duration={500} offset={-80}>Skills</ScrollLink>
         </li>
       </ul>
     </nav>

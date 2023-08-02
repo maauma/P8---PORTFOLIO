@@ -9,7 +9,7 @@ hr {
 }
 
 .landing-page {
-  overflow: auto;
+  overflow: visible;
   margin-top: 5%;
   font-family: 'Rubik';
   
@@ -88,6 +88,10 @@ hr {
     color: #007bff;
   }
 
+  hr {
+    width: 100%;
+  }
+
   h1 {
     color:black;
     margin-bottom: 0em;
@@ -99,10 +103,12 @@ hr {
   li {
     color:black;
     margin-left: -2em;
+    margin-top: -5px;
     list-style: none;
     font-weight: 200;
     font-size: 1.25em;
     transition: all 0.3s ease-in-out;
+    padding-bottom: 0.3em;
 
     &:hover {
       color: #007bff;

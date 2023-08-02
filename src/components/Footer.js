@@ -6,8 +6,7 @@ import './mobile.scss';
 const Footer = () => {
   return (
     <footer>
-      <img src="../images/signature.png" alt="Signature de Matéo PAÏTA" />
-      <p>Tous droits réservés Matéo PAÏTA</p>
+    <img src= {process.env.PUBLIC_URL + '/images/signature.svg'} alt="Signature de Matéo PAÏTA" />      <p>Tous droits réservés Matéo PAÏTA</p>
     </footer>
   );
 };

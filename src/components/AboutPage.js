@@ -67,7 +67,7 @@ const AboutPage = () => {
           </Collapse>
         </div>
 
-        <img className='signature' src={process.env.PUBLIC_URL + '/images/signatureblack.png'} alt="Votre nom" data-aos="fade-up"/>
+        <img className='signature' src={process.env.PUBLIC_URL + '/images/signatureblack.svg'} alt="Votre nom" data-aos="fade-up"/>
       </section>
     </div>
   );

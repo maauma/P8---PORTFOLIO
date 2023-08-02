@@ -46,12 +46,13 @@ const ContactPage = () => {
       <div className='contenu' data-aos="fade-up">
         < div className='prescontact'>
         <div className='blocontactphoto'>
-          <img src='/images/contactilu.png' alt='illu moi'></img>
+          <img src= {process.env.PUBLIC_URL + '/images/contactilu.png'} alt='illu moi'></img>
         </div>
         <div className='blocontact'>
           <h1>Contact</h1>
           <p><button className="contact-button" onClick={() => window.location = 'mailto:paitamateo@icloud.com'}>paitamateo@icloud.com</button> </p>
         </div>
+
         </div>
         <div className="contact-content">
             <p><a href="mailto:paitamateo@icloud.com">Contactez-moi</a> dès maintenant pour discuter de votre projet web. Que ce soit pour un nouveau site web, une refonte de design ou une optimisation SEO, je suis là pour aider à transformer vos idées en une réalité tangible.<br></br></p>

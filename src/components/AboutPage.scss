@@ -21,7 +21,7 @@
   }
 
   p {
-    font-size: 1.1em;
+    font-size: 1em;
     line-height: 1.6;
   }
 }
@@ -53,13 +53,13 @@
 
   &:hover{
     scale: 1.05;
+    cursor: pointer; /* Add a pointer cursor on hover */
   }
 }
 
 h2 {
   display: flex;
   align-items: center;
-  cursor: pointer; /* Add a pointer cursor on hover */
 }
 
 svg {

@@ -1,20 +1,12 @@
-// HomePage.js
 import './HomePage.scss';
 import React, { useState, useEffect } from 'react';
 import SkillsSection from './SkillsSection';
 import Portfolio from './Portfolio';
+import AboutPage from './AboutPage';
 import ContactPage from "./ContactPage";
 import './mobile.scss';
 import { Link as ScrollLink, Element } from 'react-scroll';
 import { Link } from 'react-router-dom';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { animateScroll as scroll } from 'react-scroll';
-
-
-
-
-
 
 const words = ['Créer...', 'Détruire...', 'Imaginer...', 'Développer...'];
 
@@ -66,67 +58,67 @@ const HomePage = () => {
       <Element name="home">
         {/* Section 1: Infos */}
         <section className="landing-page">
-        <div className='section1' style={{ backgroundImage: `url(/images/wallpaper.jpg)` }}>
-          <div className='bloc1'>
-            <div className='menu1'>
-              <h1>Développeur web</h1>
-              <ul>
-              <li><Link to="/skills">SEO</Link></li> 
-<li><Link to="/skills">Webdesign</Link></li>
-<li><Link to="/skills">CSS</Link></li>
-<li><Link to="/skills">REACT</Link></li>
-<li><Link to="/skills">JavaScript</Link></li>
-<li><Link to="/skills">HTML5</Link></li>
-              </ul>
-            </div>
+          <div className='section1' style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/wallpaper.jpg)` }}>
+            <div className='bloc1'>
+              <div className='menu1'>
+                <h1>Développeur web</h1>
+                <hr />
+                <ul>
+                  <li><ScrollLink to="skills" smooth={true} duration={500}>SEO</ScrollLink></li>
+                  <li><ScrollLink to="skills" smooth={true} duration={500}>Webdesign</ScrollLink></li>
+                  <li><ScrollLink to="skills" smooth={true} duration={500}>CSS</ScrollLink></li>
+                  <li><ScrollLink to="skills" smooth={true} duration={500}>REACT</ScrollLink></li>
+                  <li><ScrollLink to="skills" smooth={true} duration={500}>JavaScript</ScrollLink></li>
+                  <li><ScrollLink to="skills" smooth={true} duration={500}>HTML5</ScrollLink></li>
+                </ul>
+              </div>
 
-          <div className='blocNom'>
-          <img className='sign-mobile' src="../images/signatureblack.png" alt="Signature de Matéo PAÏTA" />
-          <h3>MATÉO PAÏTA</h3>
-          <hr />
-          <p>LYON <strong>FRANCE</strong></p>
-          <h4>Développeur web</h4>
-          <ul className='liste-mobile'>
-          <li><Link to="/skills">SEO</Link></li> 
-<li><Link to="/skills">Webdesign</Link></li>
-<li><Link to="/skills">CSS</Link></li>
-<li><Link to="/skills">REACT</Link></li>
-<li><Link to="/skills">JavaScript</Link></li>
-<li><Link to="/skills">HTML5</Link></li>
-            
-          </ul>
-          <div className='sign-desktop'>
-           <img src="../images/signatureblack.png" alt="Signature de Matéo PAÏTA" />
-          </div>
-          </div>
-          </div>
-          <div className='bloc2'>
-          <h2>{`${words[index].substring(0, subIndex)}${blink ? '|' : ' '}`}</h2>
-          </div>
+              <div className='blocNom'>
+                <img className='sign-mobile' src={process.env.PUBLIC_URL + '/images/signatureblack.svg'} alt="Signature de Matéo PAÏTA" />
+
+                <h3>MATÉO PAÏTA</h3>
+                <hr />
+                <p>LYON <strong>FRANCE</strong></p>
+                <h4>Développeur web</h4>
+                <ul className='liste-mobile'>
+                  <li><ScrollLink to="skills" smooth={true} duration={500}>SEO</ScrollLink></li>
+                  <li><ScrollLink to="skills" smooth={true} duration={500}>Webdesign</ScrollLink></li>
+                  <li><ScrollLink to="skills" smooth={true} duration={500}>CSS</ScrollLink></li>
+                  <li><ScrollLink to="skills" smooth={true} duration={500}>REACT</ScrollLink></li>
+                  <li><ScrollLink to="skills" smooth={true} duration={500}>JavaScript</ScrollLink></li>
+                  <li><ScrollLink to="skills" smooth={true} duration={500}>HTML5</ScrollLink></li>
+                </ul>
+                <div className='sign-desktop'>
+                  <img src={process.env.PUBLIC_URL + '/images/signatureblack.svg'} alt="Signature de Matéo PAÏTA" />
+                </div>
+              </div>
+            </div>
+            <div className='bloc2'>
+              <h2>{`${words[index].substring(0, subIndex)}${blink ? '|' : ' '}`}</h2>
+            </div>
           </div>
         </section>
         <hr />
-        <div  />
       </Element>
 
       <Element name="skills">
         {/* Section 2: Compétences */}
         <SkillsSection />
-        <div  />
       </Element>
       <hr />
 
       <Element name="portfolio">
         <Portfolio />
-        <div  />
       </Element>
       <hr />
+
+      <Element name="about-page">
+        <AboutPage />
+      </Element>
 
       <Element name="contact">
         <ContactPage />
       </Element>
-
-      
     </div>
   );
 };

@@ -8,14 +8,14 @@
     align-items: center;
     width: 90%;
     margin: auto;
-    height: 90vh;
+    height: 110vh;
     font-family: 'Rubik';
   
     // Pour les tablettes et mobiles
     @media (max-width: 768px) {
         height: 190vh;
-      margin-top: 15vh;  // augmenter cette valeur si nécessaire
-      margin-bottom: 15vh;  // augmenter cette valeur si nécessaire
+      margin-top: 25vh;  // augmenter cette valeur si nécessaire
+      margin-bottom: 20vh;  // augmenter cette valeur si nécessaire
     }
   }
   

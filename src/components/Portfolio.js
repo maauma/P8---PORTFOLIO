@@ -13,16 +13,16 @@ const Portfolio = () => {
       id: 1,
       title: 'Kasa',
       description: 'Un site web de location immobilière codé avec react et scss.',
-      logo:  'images/react.png',
-      logo2: 'images/js.png',
-      image: 'images/kasa.png',
+      logo:  `${process.env.PUBLIC_URL}/images/react.png`,
+      logo2: `${process.env.PUBLIC_URL}/images/js.png`,
+      image: `${process.env.PUBLIC_URL}/images/kasa.png`,
     },
     {
       id: 2,
       title: 'Booki',
       description: 'trouver des hébergements et des activités dans la ville de leur choix.',
-      logo: 'images/js.png', // Ajoutez le chemin vers le logo ici
-      image: 'images/BOOKI/ilubooki.jpeg',
+      logo: `${process.env.PUBLIC_URL}/images/js.png`,
+      image: `${process.env.PUBLIC_URL}/images/BOOKI/ilubooki.jpeg`,
       logo2: null
     },
 
@@ -30,34 +30,36 @@ const Portfolio = () => {
       id: 3,
       title: 'Nina Carducci',
       description: 'Debugage et optimisation SEO',
-      logo: 'images/google.png', // Ajoutez le chemin vers le logo ici
-      image: 'images/NINA/nina.png',
+      logo: `${process.env.PUBLIC_URL}/images/google.png`, 
+      image: `${process.env.PUBLIC_URL}/images/NINA/nina.png`,
     },
-
+    
     {
       id: 4,
       title: 'Sophie Bluel',
-      description: 'Décoratrice dintérieur',
-      logo: 'images/js.png', // Ajoutez le chemin vers le logo ici
-      logo2: 'images/html.png',
-      image: 'images/BLUEL/sophie.png',
+      description: 'Décoratrice d’intérieur',
+      logo: `${process.env.PUBLIC_URL}/images/js.png`, 
+      logo2: `${process.env.PUBLIC_URL}/images/html.png`,
+      image: `${process.env.PUBLIC_URL}/images/BLUEL/sophie.png`,
     },
+    
     {
       id: 5,
       title: 'Grimoire',
       description: 'Backend pour un site de notation de livres',
-      logo: 'images/mongodb.png', // Ajoutez le chemin vers le logo ici
-      logo2: 'images/node.png',
-      image: 'images/GRIMOIRE/ilugrim.avif',
+      logo: `${process.env.PUBLIC_URL}/images/mongodb.png`, 
+      logo2: `${process.env.PUBLIC_URL}/images/node.png`,
+      image: `${process.env.PUBLIC_URL}/images/GRIMOIRE/ilugrim.avif`,
     },
-
+    
     {
       id: 6,
       title: 'Menu Maker',
       description: 'Description du projet 6',
-      logo: 'images/notion.png', // Ajoutez le chemin vers le logo ici
-      image: 'images/MENU/menuilu.jpg',
-    },
+      logo: `${process.env.PUBLIC_URL}/images/notion.png`, 
+      image: `${process.env.PUBLIC_URL}/images/MENU/menuilu.jpg`,
+    }
+    
   ];
 
   return (

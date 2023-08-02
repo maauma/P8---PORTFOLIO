@@ -24,7 +24,7 @@ const App = () => {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/portfolio" element={<Portfolio />} /> 
         <Route path="/skills" element={<SkillsSection />} />
-        <Route path="/skills/:id" component={SkillsDetail} />
+        <Route path="/skills/:id" element={SkillsDetail} />
         <Route path="/project/:id" element={<ProjectDetail />} />  // Ajoutez une nouvelle route pour le détail du projet
       </Routes>
       <Footer />
