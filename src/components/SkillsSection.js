@@ -86,7 +86,7 @@ const SkillsSection = () => {
   return (
     <div className="skills-section">
       <div className='blocinfo' data-aos="fade-up">
-        <h2>Mes compétences</h2>
+        <h2>Compétences</h2>
         <h3>Pour donner vie à votre vision</h3>
         <p>Mon rôle de <strong>développeur web</strong>, c'est d'apporter <strong>votre vision</strong> à la vie numérique.<br></br> Grâce à mon expertise en HTML5, CSS, JavaScript et React, je suis capable de transformer vos<strong> idées en sites web interactifs et dynamiques.</strong> En tant qu'ancien designer graphique, je conçois des <strong>interfaces utilisateur attrayantes</strong> qui améliorent <strong>l'expérience utilisateur</strong> et encouragent <strong>l'engagement</strong>. De plus, grâce à ma maîtrise du SEO, je peux<strong> optimiser la visibilité de votre site </strong> sur les moteurs de recherche, pour que votre vision atteigne un <strong>public plus large</strong>.</p>
       </div>

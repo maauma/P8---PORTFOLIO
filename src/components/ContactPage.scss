@@ -230,7 +230,8 @@ $white-color: #ffffff;
 @media (max-width: 576px) {
 
   .contenu {
-    height: 30vh!important;
+    margin-top: 10em;
+    height: auto;
     margin-bottom: 5em!important;
     margin-bottom: 0;
   }
@@ -243,7 +244,7 @@ $white-color: #ffffff;
   .contact-button{
     width: 100%;
     font-size: 1em!important;
-    margin-bottom: 0;
+    margin-bottom: 1em!important;
   }
 
   .blocontactphoto{
@@ -257,14 +258,8 @@ $white-color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center!important;
-    height: auto;
+    height: auto!important;
     margin-bottom: 0;
   }
 
-  .contact-content{
-    width: 100%;
-    p {
-      margin-top: 3em;
-    }
-  }
 }

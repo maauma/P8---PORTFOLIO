@@ -115,6 +115,7 @@ const HomePage = () => {
       <Element name="about-page">
         <AboutPage />
       </Element>
+      <hr />
 
       <Element name="contact">
         <ContactPage />

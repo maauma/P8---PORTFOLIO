@@ -10,8 +10,10 @@ hr {
 
 .landing-page {
   overflow: visible;
-  margin-top: 5%;
   font-family: 'Rubik';
+  width: 100%;
+  
+
   
 
   a {
@@ -26,11 +28,13 @@ hr {
 }
 
 .section1 {
-  height: 80vh;
-  width: 90%;
-  margin: auto;
+  width: 95%;
+  height: 90vh;
+  margin: auto!important;
   background-size: cover;
   background-repeat: no-repeat;
+  
+  
 }
 
 .bloc1 {
@@ -40,7 +44,6 @@ hr {
   align-items:self-start;
   width: 90%;
   margin: 2% auto;
-  height: 75vh;
 
   h1 {
     color: black;
@@ -158,6 +161,7 @@ hr {
   position: relative;
   width: 90%;
   margin: auto;
+  margin-bottom: 3em;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -229,6 +233,10 @@ hr {
 
 @media (max-width: 768px) {
 
+  .landing-page {
+    height: 90vh!important;
+  }
+
   .sign-mobile{
     display: block!important;
   }
@@ -243,7 +251,6 @@ hr {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-top: 7%;
   }
 
 

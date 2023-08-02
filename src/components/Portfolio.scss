@@ -8,15 +8,17 @@
     align-items: center;
     width: 90%;
     margin: auto;
-    height: 110vh;
+    height: 100vh;
     font-family: 'Rubik';
+
   
-    // Pour les tablettes et mobiles
-    @media (max-width: 768px) {
-        height: 190vh;
-      margin-top: 25vh;  // augmenter cette valeur si nécessaire
-      margin-bottom: 20vh;  // augmenter cette valeur si nécessaire
-    }
+
+
+    /* Pour les mobiles en mode portrait */
+@media (max-width: 746px) {
+    height: 100%!important;
+  }
+  
   }
   
 
@@ -59,7 +61,7 @@
     margin: auto;
 
     h3 {
-      font-size: 85px;
+      font-size: 4em;
       margin-bottom: 0px;
       margin-top: 0;
 
@@ -98,6 +100,8 @@
     // Pour les mobiles
     @media (max-width: 576px) {
       grid-template-columns: 1fr;
+      margin-bottom: 3em;
+
 
    
 
